@@ -46,6 +46,8 @@ public class Player_Shooter : MonoBehaviour
 
     private IEnumerator ShotGen(Vector3 pos)
     {
+
+        //generar explosion particulas
         GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
         sphere.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
         sphere.transform.position = pos;
