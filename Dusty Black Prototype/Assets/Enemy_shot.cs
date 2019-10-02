@@ -16,9 +16,15 @@ public class Enemy_shot : MonoBehaviour
 
     public void GotShot()
     {
+
         health -= 40;
         if (health<=0)
         {
+            Enemy_Movement behavior = GetComponent<Enemy_Movement>();
+            if (behavior != null)
+            {
+                behavior.SetAlive(false);
+            }
             StartCoroutine(Die());
         }
     }

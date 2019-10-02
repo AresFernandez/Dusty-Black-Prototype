@@ -61,9 +61,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Camer_control.cs" />
+    <Compile Include="Assets\Enemy_Movement.cs" />
     <Compile Include="Assets\Enemy_shot.cs" />
+    <Compile Include="Assets\EnemyShot.cs" />
     <Compile Include="Assets\Player_movement.cs" />
     <Compile Include="Assets\Player_Shooter.cs" />
+    <Compile Include="Assets\PlayerInfo.cs" />
     <Reference Include="Unity.ProBuilder">
       <HintPath>C:/Users/aresi/Documents/Repositories/Dusty_Black_Prototype/Dusty Black Prototype/Library/ScriptAssemblies/Unity.ProBuilder.dll</HintPath>
     </Reference>

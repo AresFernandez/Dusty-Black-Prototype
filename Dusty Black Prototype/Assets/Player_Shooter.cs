@@ -32,7 +32,6 @@ public class Player_Shooter : MonoBehaviour
 
                 if (target != null)
                 {
-                    StartCoroutine(ShotGen(hit.point));
                     target.GotShot();
                 }
                 else
