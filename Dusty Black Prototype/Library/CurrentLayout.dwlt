@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 498}
   m_MaxSize: {x: 10004, y: 14048}
   vertical: 1
-  controlID: 110
+  controlID: 55
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_MinSize: {x: 711, y: 498}
   m_MaxSize: {x: 18006, y: 14048}
   vertical: 0
-  controlID: 109
+  controlID: 54
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -430,11 +430,11 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/materials
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/materials
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\aresi\Documents\Repositories\Dusty_Black_Prototype\Dusty
     Black Prototype
@@ -442,9 +442,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: b09d0000
-    m_LastClickedID: 40368
-    m_ExpandedIDs: 00000000e8280000fa2c00005a2d0000da2d000000ca9a3b
+    m_SelectedIDs: ac2a0000
+    m_LastClickedID: 10924
+    m_ExpandedIDs: 00000000f02800000e2d00006e2d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -472,7 +472,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e8280000fa2c00005a2d0000da2d0000
+    m_ExpandedIDs: 00000000f02800000e2d00006e2d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -526,7 +526,7 @@ MonoBehaviour:
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
-  m_DirectoriesAreaWidth: 110
+  m_DirectoriesAreaWidth: 156
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -591,9 +591,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: cecbfdff
-      m_LastClickedID: -144434
-      m_ExpandedIDs: d4fbffff
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: c4e6ffffd4fbffff522f0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -649,9 +649,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 16.930927, y: -6.207157, z: 23.957314}
+    m_Target: {x: 3.7732596, y: 3.189306, z: 0.19346423}
     speed: 2
-    m_Value: {x: 16.930927, y: -6.207157, z: 23.957314}
+    m_Value: {x: 3.7732596, y: 3.189306, z: 0.19346423}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -679,13 +679,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.1881718, y: -0.5336847, z: 0.123193026, w: 0.8152273}
+    m_Target: {x: -0.39706758, y: -0.012354937, z: 0.0053393985, w: -0.91769075}
     speed: 2
-    m_Value: {x: 0.1881718, y: -0.5336847, z: 0.123193026, w: 0.8152273}
+    m_Value: {x: -0.39706758, y: -0.012354937, z: 0.0053393985, w: -0.91769075}
   m_Size:
-    m_Target: 36.67523
+    m_Target: 22
     speed: 2
-    m_Value: 36.67523
+    m_Value: 22
   m_Ortho:
     m_Target: 0
     speed: 2

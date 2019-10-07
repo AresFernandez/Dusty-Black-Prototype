@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: 6e75046efb919e946be89fe37e7aa187
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - PlayerBase1: {fileID: 8975841287700197997, guid: b6c0e44e81a99dd4382341be7be316c3,
+      type: 3}
+  - PlayerBase2: {fileID: 8167843632280098445, guid: 85e3645ae82bb29428d2b2700f8b4389,
+      type: 3}
+  - PlayerBase3: {fileID: 1685603797453817558, guid: fae65476043b8a449a064b2fd454e491,
+      type: 3}
+  - EnemyBase1: {fileID: 7514102328222077038, guid: 9aef73007293ce64baaed83870c2889d,
+      type: 3}
+  - EnemyBase2: {fileID: 1445352746429571592, guid: 29c6e0a6a1174674babeb0fcef93f50f,
+      type: 3}
+  - EnemyBase3: {fileID: 3424244409322074989, guid: e6cae49a276dcb54c92d91ca2345ecd7,
+      type: 3}
+  - adjacent1: {instanceID: 0}
+  - adjacent2: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
