@@ -28,7 +28,6 @@ public class MapSelector : MonoBehaviour
             if (Physics.Raycast(ray, out hit))
             {
                 GameObject hitObject = hit.transform.parent.parent.gameObject;
-                Debug.Log(hitObject.name);
 
                 switch (hitObject.name)
                 {

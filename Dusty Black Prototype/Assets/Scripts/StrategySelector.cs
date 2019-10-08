@@ -20,11 +20,16 @@ public class StrategySelector : MonoBehaviour
     public Button button2;
     public Button button3;
 
+    private Color allyColor;
+    private Color enemyColor;
+
 
     // Start is called before the first frame update
     void Start()
     {
         info = GameObject.Find("InfoHolder");
+        allyColor = new Color(103f/255f, 1, 103f/255f, 219f/255f);
+        enemyColor = new Color(1, 53f/255f, 53f/255f, 219f/255f);
     }
 
     // Update is called once per frame
@@ -34,6 +39,7 @@ public class StrategySelector : MonoBehaviour
         switch (slot.GetComponent<Base>().BaseType)
         {
             case Base.Type.PlayerBase1:
+                this.gameObject.GetComponent<Image>().color = allyColor;
                 title.text = "Allied Base Level 1";
                 button1.gameObject.SetActive(false);
                 price1.gameObject.SetActive(false);
@@ -46,6 +52,7 @@ public class StrategySelector : MonoBehaviour
                 rate3.gameObject.SetActive(false);
                 break;
             case Base.Type.PlayerBase2:
+                this.gameObject.GetComponent<Image>().color = allyColor;
                 title.text = "Allied Base Level 2";
                 button1.gameObject.SetActive(false);
                 price1.gameObject.SetActive(false);
@@ -58,6 +65,7 @@ public class StrategySelector : MonoBehaviour
                 rate3.gameObject.SetActive(false);
                 break;
             case Base.Type.PlayerBase3:
+                this.gameObject.GetComponent<Image>().color = allyColor;
                 title.text = "Allied Base Level 3";
                 button1.gameObject.SetActive(false);
                 price1.gameObject.SetActive(false);
@@ -70,6 +78,7 @@ public class StrategySelector : MonoBehaviour
                 rate3.gameObject.SetActive(false);
                 break;
             case Base.Type.EnemyBase1:
+                this.gameObject.GetComponent<Image>().color = enemyColor;
                 title.text = "Enemy Base Level 1";
                 price1.text = "Price: " + info.GetComponent<StrategyInfo>().littleBase.option1.price + "€";
                 rate1.text = "Success Rate: " + info.GetComponent<StrategyInfo>().littleBase.option1.rate + "%";
@@ -79,6 +88,7 @@ public class StrategySelector : MonoBehaviour
                 rate3.text = "Success Rate: " + info.GetComponent<StrategyInfo>().littleBase.option3.rate + "%";
                 break;
             case Base.Type.EnemyBase2:
+                this.gameObject.GetComponent<Image>().color = enemyColor;
                 title.text = "Enemy Base Level 2";
                 price1.text = "Price: " + info.GetComponent<StrategyInfo>().mediumBase.option1.price + "€";
                 rate1.text = "Success Rate: " + info.GetComponent<StrategyInfo>().mediumBase.option1.rate + "%";
@@ -88,6 +98,7 @@ public class StrategySelector : MonoBehaviour
                 rate3.text = "Success Rate: " + info.GetComponent<StrategyInfo>().mediumBase.option3.rate + "%";
                 break;
             case Base.Type.EnemyBase3:
+                this.gameObject.GetComponent<Image>().color = enemyColor;
                 title.text = "Enemy Base Level 3";
                 price1.text = "Price: " + info.GetComponent<StrategyInfo>().largeBase.option1.price + "€";
                 rate1.text = "Success Rate: " + info.GetComponent<StrategyInfo>().largeBase.option1.rate + "%";
