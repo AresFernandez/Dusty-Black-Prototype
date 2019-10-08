@@ -743,6 +743,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1632420986}
+  ExitTrigger: {fileID: 489423899}
 --- !u!1001 &284841914
 PrefabInstance:
   m_ObjectHideFlags: 0
