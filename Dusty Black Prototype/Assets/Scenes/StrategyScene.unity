@@ -2320,6 +2320,7 @@ GameObject:
   - component: {fileID: 785407801}
   - component: {fileID: 785407803}
   - component: {fileID: 785407802}
+  - component: {fileID: 785407804}
   m_Layer: 5
   m_Name: FailPanel
   m_TagString: Untagged
@@ -2384,6 +2385,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 785407800}
   m_CullTransparentMesh: 0
+--- !u!114 &785407804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785407800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72be247be58870742803d746387a54b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DieTime: 3
 --- !u!1 &809302192
 GameObject:
   m_ObjectHideFlags: 0
@@ -2874,6 +2888,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   money: 0
+  difficulty: 0
+  strategySuccess: 0
 --- !u!1 &988341625
 GameObject:
   m_ObjectHideFlags: 0
@@ -3069,6 +3085,7 @@ GameObject:
   - component: {fileID: 1015468557}
   - component: {fileID: 1015468559}
   - component: {fileID: 1015468558}
+  - component: {fileID: 1015468560}
   m_Layer: 5
   m_Name: SuccessPanel
   m_TagString: Untagged
@@ -3093,7 +3110,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000015258789, y: -225}
+  m_AnchoredPosition: {x: 0, y: -225}
   m_SizeDelta: {x: -1030, y: -550}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1015468558
@@ -3133,6 +3150,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1015468556}
   m_CullTransparentMesh: 0
+--- !u!114 &1015468560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015468556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72be247be58870742803d746387a54b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DieTime: 3
 --- !u!1 &1026382590
 GameObject:
   m_ObjectHideFlags: 0

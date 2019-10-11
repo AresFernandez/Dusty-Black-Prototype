@@ -25,10 +25,13 @@ public class StrategySelector : MonoBehaviour
     private Color allyColor;
     private Color enemyColor;
 
+    private bool selected;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        selected = false;
         info = GameObject.Find("InfoHolder");
         allyColor = new Color(103f/255f, 1, 103f/255f, 219f/255f);
         enemyColor = new Color(1, 53f/255f, 53f/255f, 219f/255f);
@@ -119,85 +122,96 @@ public class StrategySelector : MonoBehaviour
 
     public void Purchase(Base.Type type, int option)
     {
-        int price = 0, rate = 0;
-
-        switch (slot.GetComponent<Base>().BaseType)
+        if (!selected)
         {
-            case Base.Type.PlayerBase1:
-                break;
-            case Base.Type.PlayerBase2:
-                break;
-            case Base.Type.PlayerBase3:
-                break;
-            case Base.Type.EnemyBase1:
-                if (option == 1)
-                {
-                    price = info.GetComponent<StrategyInfo>().littleBase.option1.price;
-                    rate = info.GetComponent<StrategyInfo>().littleBase.option1.rate;
-                }
-                else if (option == 2)
-                {
-                    price = info.GetComponent<StrategyInfo>().littleBase.option2.price;
-                    rate = info.GetComponent<StrategyInfo>().littleBase.option2.rate;
-                } else if (option == 3)
-                {
-                    price = info.GetComponent<StrategyInfo>().littleBase.option3.price;
-                    rate = info.GetComponent<StrategyInfo>().littleBase.option3.rate;
-                }
-                break;
-            case Base.Type.EnemyBase2:
-                if (option == 1)
-                {
-                    price = info.GetComponent<StrategyInfo>().mediumBase.option1.price;
-                    rate = info.GetComponent<StrategyInfo>().mediumBase.option1.rate;
-                }
-                else if (option == 2)
-                {
-                    price = info.GetComponent<StrategyInfo>().mediumBase.option2.price;
-                    rate = info.GetComponent<StrategyInfo>().mediumBase.option2.rate;
-                }
-                else if (option == 3)
-                {
-                    price = info.GetComponent<StrategyInfo>().mediumBase.option3.price;
-                    rate = info.GetComponent<StrategyInfo>().mediumBase.option3.rate;
-                }
-                break;
-            case Base.Type.EnemyBase3:
-                if (option == 1)
-                {
-                    price = info.GetComponent<StrategyInfo>().largeBase.option1.price;
-                    rate = info.GetComponent<StrategyInfo>().largeBase.option1.rate;
-                }
-                else if (option == 2)
-                {
-                    price = info.GetComponent<StrategyInfo>().largeBase.option2.price;
-                    rate = info.GetComponent<StrategyInfo>().largeBase.option2.rate;
-                }
-                else if (option == 3)
-                {
-                    price = info.GetComponent<StrategyInfo>().largeBase.option3.price;
-                    rate = info.GetComponent<StrategyInfo>().largeBase.option3.rate;
-                }
-                break;
-            default:
-                break;
+            int price = 0, rate = 0;
+
+            switch (slot.GetComponent<Base>().BaseType)
+            {
+                case Base.Type.PlayerBase1:
+                    break;
+                case Base.Type.PlayerBase2:
+                    break;
+                case Base.Type.PlayerBase3:
+                    break;
+                case Base.Type.EnemyBase1:
+                    info.GetComponent<StrategyInfo>().difficulty = 1;
+                    if (option == 1)
+                    {
+                        price = info.GetComponent<StrategyInfo>().littleBase.option1.price;
+                        rate = info.GetComponent<StrategyInfo>().littleBase.option1.rate;
+                    }
+                    else if (option == 2)
+                    {
+                        price = info.GetComponent<StrategyInfo>().littleBase.option2.price;
+                        rate = info.GetComponent<StrategyInfo>().littleBase.option2.rate;
+                    } else if (option == 3)
+                    {
+                        price = info.GetComponent<StrategyInfo>().littleBase.option3.price;
+                        rate = info.GetComponent<StrategyInfo>().littleBase.option3.rate;
+                    }
+                    break;
+                case Base.Type.EnemyBase2:
+                    info.GetComponent<StrategyInfo>().difficulty = 2;
+                    if (option == 1)
+                    {
+                        price = info.GetComponent<StrategyInfo>().mediumBase.option1.price;
+                        rate = info.GetComponent<StrategyInfo>().mediumBase.option1.rate;
+                    }
+                    else if (option == 2)
+                    {
+                        price = info.GetComponent<StrategyInfo>().mediumBase.option2.price;
+                        rate = info.GetComponent<StrategyInfo>().mediumBase.option2.rate;
+                    }
+                    else if (option == 3)
+                    {
+                        price = info.GetComponent<StrategyInfo>().mediumBase.option3.price;
+                        rate = info.GetComponent<StrategyInfo>().mediumBase.option3.rate;
+                    }
+                    break;
+                case Base.Type.EnemyBase3:
+                    info.GetComponent<StrategyInfo>().difficulty = 3;
+                    if (option == 1)
+                    {
+                        price = info.GetComponent<StrategyInfo>().largeBase.option1.price;
+                        rate = info.GetComponent<StrategyInfo>().largeBase.option1.rate;
+                    }
+                    else if (option == 2)
+                    {
+                        price = info.GetComponent<StrategyInfo>().largeBase.option2.price;
+                        rate = info.GetComponent<StrategyInfo>().largeBase.option2.rate;
+                    }
+                    else if (option == 3)
+                    {
+                        price = info.GetComponent<StrategyInfo>().largeBase.option3.price;
+                        rate = info.GetComponent<StrategyInfo>().largeBase.option3.rate;
+                    }
+                    break;
+                default:
+                    break;
+            }
+
+            info.GetComponent<StrategyInfo>().money -= price;
+
+            int random = Random.Range(0, 100);
+
+            if (random <= rate)
+            {
+                //Success Case
+                info.GetComponent<StrategyInfo>().strategySuccess = true;
+                successPanel.SetActive(true);
+            }
+            else
+            {
+                //Fail Case
+                info.GetComponent<StrategyInfo>().strategySuccess = false;
+                failPanel.SetActive(true);
+            }
+
+            info.GetComponent<StrategyInfo>().activeSlot = slot.name;
+
+           selected = true;
         }
-
-        info.GetComponent<StrategyInfo>().money -= price;
-
-        int random = Random.Range(0, 100);
-
-        if (random <= rate)
-        {
-            //Success Case
-            successPanel.SetActive(true);
-        }
-        else
-        {
-            //Fail Case
-            failPanel.SetActive(true);
-        }
-
     }
 
 }

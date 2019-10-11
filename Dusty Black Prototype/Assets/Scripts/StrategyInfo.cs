@@ -10,6 +10,25 @@ public class StrategyInfo : MonoBehaviour
     //Strategy stuff
     public int money;
 
+    public int difficulty;
+    public bool strategySuccess;
+
+    public string activeSlot;
+    
+    public GameObject slot00, slot01, slot10, slot11;
+
+    public struct EnemyShotStats
+    {
+        public float speed;
+        public int damage;
+    }
+
+    public struct EnemyType
+    {
+        public EnemyShotStats weak;
+        public EnemyShotStats strong;
+    }
+
     public struct OptionInfo
     {
         public int price;
@@ -26,6 +45,10 @@ public class StrategyInfo : MonoBehaviour
     public BaseOptions littleBase;
     public BaseOptions mediumBase;
     public BaseOptions largeBase;
+
+    public EnemyType easyEnemy;
+    public EnemyType mediumEnemy;
+    public EnemyType hardEnemy;
 
 
     //Singleton behavior
@@ -52,7 +75,27 @@ public class StrategyInfo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //global stats
         money = 500;
+
+        //Enemy Stats
+        easyEnemy.weak.speed = 10.0f;
+        easyEnemy.strong.speed = 10.0f;
+
+        mediumEnemy.weak.speed = 15.0f;
+        mediumEnemy.strong.speed = 15.0f;
+
+        hardEnemy.weak.speed = 20.0f;
+        hardEnemy.strong.speed = 20.0f;
+
+        easyEnemy.weak.damage = 20;
+        easyEnemy.strong.damage = 25;
+
+        mediumEnemy.weak.damage = 40;
+        mediumEnemy.strong.damage = 60;
+
+        hardEnemy.weak.damage = 70;
+        hardEnemy.strong.damage = 100;
 
         //Little base
         littleBase.option1.price = 25;
@@ -84,12 +127,53 @@ public class StrategyInfo : MonoBehaviour
         largeBase.option3.price = 200;
         largeBase.option3.rate = 60;
 
+
+        // Slots management
+        slot00.GetComponent<Base>().BaseType = Base.Type.PlayerBase3;
+        slot01.GetComponent<Base>().BaseType = Base.Type.EnemyBase1;
+        slot10.GetComponent<Base>().BaseType = Base.Type.EnemyBase2;
+        slot11.GetComponent<Base>().BaseType = Base.Type.EnemyBase3;
+
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    void MissionSuccess()
+    {
+        if (activeSlot == "Slot 0 - 0")
+        {
+            switch (slot00.GetComponent<Base>().BaseType)
+            {
+                case Base.Type.PlayerBase1:
+                    slot00.GetComponent<Base>().BaseType = Base.Type.PlayerBase2;
+                    break;
+                case Base.Type.PlayerBase2:
+                    slot00.GetComponent<Base>().BaseType = Base.Type.PlayerBase3;
+                    break;
+                case Base.Type.PlayerBase3:
+                    break;
+                case Base.Type.EnemyBase1:
+                    slot00.GetComponent<Base>().BaseType = Base.Type.PlayerBase1;
+                    break;
+                case Base.Type.EnemyBase2:
+                    slot00.GetComponent<Base>().BaseType = Base.Type.EnemyBase1;
+                    break;
+                case Base.Type.EnemyBase3:
+                    slot00.GetComponent<Base>().BaseType = Base.Type.EnemyBase2;
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+
+    void MissionFail()
+    {
+
     }
 
 }

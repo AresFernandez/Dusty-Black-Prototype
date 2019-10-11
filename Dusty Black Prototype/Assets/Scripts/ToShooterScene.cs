@@ -1,0 +1,26 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class ToShooterScene : MonoBehaviour
+{
+    public float DieTime = 3;
+
+    private float startTime;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        startTime = Time.time;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Time.time - startTime >= DieTime)
+        {
+            SceneManager.LoadScene("ShooterScene");
+        }
+    }
+}
