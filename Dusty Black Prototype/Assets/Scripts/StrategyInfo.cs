@@ -15,7 +15,7 @@ public class StrategyInfo : MonoBehaviour
 
     public string activeSlot;
     
-    public GameObject slot00, slot01, slot10, slot11;
+    public Base.Type slot00, slot01, slot10, slot11;
 
     public struct EnemyShotStats
     {
@@ -52,29 +52,20 @@ public class StrategyInfo : MonoBehaviour
 
 
     //Singleton behavior
-    public static StrategyInfo Instance {
-        get
-        {
-            if (_instance == null)
-            {
-                _instance = GameObject.FindObjectOfType<StrategyInfo>();
-            }
-
-            return _instance;
-        }
-    }
+    public static StrategyInfo Instance { get { return _instance; } }
 
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
-    }
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            _instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
 
-
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
         //global stats
         money = 500;
 
@@ -129,10 +120,19 @@ public class StrategyInfo : MonoBehaviour
 
 
         // Slots management
-        slot00.GetComponent<Base>().BaseType = Base.Type.PlayerBase3;
-        slot01.GetComponent<Base>().BaseType = Base.Type.EnemyBase1;
-        slot10.GetComponent<Base>().BaseType = Base.Type.EnemyBase2;
-        slot11.GetComponent<Base>().BaseType = Base.Type.EnemyBase3;
+        slot00 = Base.Type.PlayerBase3;
+        slot01 = Base.Type.EnemyBase1;
+        slot10 = Base.Type.EnemyBase2;
+        slot11 = Base.Type.EnemyBase3;
+    }
+
+
+
+
+    // Start is called before the first frame update
+    void Start()
+    {
+       
 
     }
 
@@ -142,28 +142,103 @@ public class StrategyInfo : MonoBehaviour
         
     }
 
-    void MissionSuccess()
+    public void MissionSuccess()
     {
         if (activeSlot == "Slot 0 - 0")
         {
-            switch (slot00.GetComponent<Base>().BaseType)
+            switch (slot00)
             {
                 case Base.Type.PlayerBase1:
-                    slot00.GetComponent<Base>().BaseType = Base.Type.PlayerBase2;
+                    slot00 = Base.Type.PlayerBase2;
                     break;
                 case Base.Type.PlayerBase2:
-                    slot00.GetComponent<Base>().BaseType = Base.Type.PlayerBase3;
+                    slot00 = Base.Type.PlayerBase3;
                     break;
                 case Base.Type.PlayerBase3:
                     break;
                 case Base.Type.EnemyBase1:
-                    slot00.GetComponent<Base>().BaseType = Base.Type.PlayerBase1;
+                    slot00 = Base.Type.PlayerBase1;
                     break;
                 case Base.Type.EnemyBase2:
-                    slot00.GetComponent<Base>().BaseType = Base.Type.EnemyBase1;
+                    slot00 = Base.Type.EnemyBase1;
                     break;
                 case Base.Type.EnemyBase3:
-                    slot00.GetComponent<Base>().BaseType = Base.Type.EnemyBase2;
+                    slot00 = Base.Type.EnemyBase2;
+                    break;
+                default:
+                    break;
+            }
+        }
+        else if (activeSlot == "Slot 0 - 1")
+        {
+            switch (slot01)
+            {
+                case Base.Type.PlayerBase1:
+                    slot01 = Base.Type.PlayerBase2;
+                    break;
+                case Base.Type.PlayerBase2:
+                    slot01 = Base.Type.PlayerBase3;
+                    break;
+                case Base.Type.PlayerBase3:
+                    break;
+                case Base.Type.EnemyBase1:
+                    slot01 = Base.Type.PlayerBase1;
+                    break;
+                case Base.Type.EnemyBase2:
+                    slot01 = Base.Type.EnemyBase1;
+                    break;
+                case Base.Type.EnemyBase3:
+                    slot01 = Base.Type.EnemyBase2;
+                    break;
+                default:
+                    break;
+            }
+        }
+        else if (activeSlot == "Slot 1 - 0")
+        {
+            switch (slot10)
+            {
+                case Base.Type.PlayerBase1:
+                    slot10 = Base.Type.PlayerBase2;
+                    break;
+                case Base.Type.PlayerBase2:
+                    slot10 = Base.Type.PlayerBase3;
+                    break;
+                case Base.Type.PlayerBase3:
+                    break;
+                case Base.Type.EnemyBase1:
+                    slot10 = Base.Type.PlayerBase1;
+                    break;
+                case Base.Type.EnemyBase2:
+                    slot10 = Base.Type.EnemyBase1;
+                    break;
+                case Base.Type.EnemyBase3:
+                    slot10 = Base.Type.EnemyBase2;
+                    break;
+                default:
+                    break;
+            }
+        }
+        else if (activeSlot == "Slot 1 - 1")
+        {
+            switch (slot11)
+            {
+                case Base.Type.PlayerBase1:
+                    slot11 = Base.Type.PlayerBase2;
+                    break;
+                case Base.Type.PlayerBase2:
+                    slot11 = Base.Type.PlayerBase3;
+                    break;
+                case Base.Type.PlayerBase3:
+                    break;
+                case Base.Type.EnemyBase1:
+                    slot11 = Base.Type.PlayerBase1;
+                    break;
+                case Base.Type.EnemyBase2:
+                    slot11 = Base.Type.EnemyBase1;
+                    break;
+                case Base.Type.EnemyBase3:
+                    slot11 = Base.Type.EnemyBase2;
                     break;
                 default:
                     break;
@@ -171,9 +246,108 @@ public class StrategyInfo : MonoBehaviour
         }
     }
 
-    void MissionFail()
+    public void MissionFail()
     {
-
+        if (activeSlot == "Slot 0 - 0")
+        {
+            switch (slot00)
+            {
+                case Base.Type.PlayerBase1:
+                    slot00 = Base.Type.EnemyBase1;
+                    break;
+                case Base.Type.PlayerBase2:
+                    slot00 = Base.Type.PlayerBase1;
+                    break;
+                case Base.Type.PlayerBase3:
+                    slot00 = Base.Type.PlayerBase2;
+                    break;
+                case Base.Type.EnemyBase1:
+                    slot00 = Base.Type.EnemyBase2;
+                    break;
+                case Base.Type.EnemyBase2:
+                    slot00 = Base.Type.EnemyBase3;
+                    break;
+                case Base.Type.EnemyBase3:
+                    break;
+                default:
+                    break;
+            }
+        }
+        else if (activeSlot == "Slot 0 - 1")
+        {
+            switch (slot01)
+            {
+                case Base.Type.PlayerBase1:
+                    slot01 = Base.Type.EnemyBase1;
+                    break;
+                case Base.Type.PlayerBase2:
+                    slot01 = Base.Type.PlayerBase1;
+                    break;
+                case Base.Type.PlayerBase3:
+                    slot01 = Base.Type.PlayerBase2;
+                    break;
+                case Base.Type.EnemyBase1:
+                    slot01 = Base.Type.EnemyBase2;
+                    break;
+                case Base.Type.EnemyBase2:
+                    slot01 = Base.Type.EnemyBase3;
+                    break;
+                case Base.Type.EnemyBase3:
+                    break;
+                default:
+                    break;
+            }
+        }
+        else if (activeSlot == "Slot 1 - 0")
+        {
+            switch (slot10)
+            {
+                case Base.Type.PlayerBase1:
+                    slot10 = Base.Type.EnemyBase1;
+                    break;
+                case Base.Type.PlayerBase2:
+                    slot10 = Base.Type.PlayerBase1;
+                    break;
+                case Base.Type.PlayerBase3:
+                    slot10 = Base.Type.PlayerBase2;
+                    break;
+                case Base.Type.EnemyBase1:
+                    slot10 = Base.Type.EnemyBase2;
+                    break;
+                case Base.Type.EnemyBase2:
+                    slot10 = Base.Type.EnemyBase3;
+                    break;
+                case Base.Type.EnemyBase3:
+                    break;
+                default:
+                    break;
+            }
+        }
+        else if (activeSlot == "Slot 1 - 1")
+        {
+            switch (slot11)
+            {
+                case Base.Type.PlayerBase1:
+                    slot11 = Base.Type.EnemyBase1;
+                    break;
+                case Base.Type.PlayerBase2:
+                    slot11 = Base.Type.PlayerBase1;
+                    break;
+                case Base.Type.PlayerBase3:
+                    slot11 = Base.Type.PlayerBase2;
+                    break;
+                case Base.Type.EnemyBase1:
+                    slot11 = Base.Type.EnemyBase2;
+                    break;
+                case Base.Type.EnemyBase2:
+                    slot11 = Base.Type.EnemyBase3;
+                    break;
+                case Base.Type.EnemyBase3:
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 
 }

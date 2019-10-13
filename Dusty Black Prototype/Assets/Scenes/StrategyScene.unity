@@ -2890,6 +2890,10 @@ MonoBehaviour:
   money: 0
   difficulty: 0
   strategySuccess: 0
+  slot00: {fileID: 714258936}
+  slot01: {fileID: 2056581876}
+  slot10: {fileID: 1026382590}
+  slot11: {fileID: 1578192982}
 --- !u!1 &988341625
 GameObject:
   m_ObjectHideFlags: 0

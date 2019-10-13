@@ -15,6 +15,26 @@ public class Base : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        StrategyInfo info = GameObject.Find("InfoHolder").GetComponent<StrategyInfo>();
+
+        if (this.gameObject.name == "Slot 0 - 0")
+        {
+            BaseType = info.slot00;
+        }
+        else if (this.gameObject.name == "Slot 0 - 1")
+        {
+            BaseType = info.slot01;
+        }
+        else if (this.gameObject.name == "Slot 1 - 0")
+        {
+            BaseType = info.slot10;
+        }
+        else if (this.gameObject.name == "Slot ¡1 - 1")
+        {
+            BaseType = info.slot11;
+        }
+
+
         switch (BaseType)
         {
             case Type.PlayerBase1:

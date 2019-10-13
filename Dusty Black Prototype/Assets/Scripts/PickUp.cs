@@ -13,6 +13,7 @@ public class PickUp : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             text.SetActive(true);
+            ExitTrigger.GetComponent<WinChecker>().missionDone = true;
             Destroy(this.gameObject);
         }
     }
