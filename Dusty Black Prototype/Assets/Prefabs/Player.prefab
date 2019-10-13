@@ -1788,6 +1788,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67eed56810664304884e9421d0f059e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
+  HPSlider: {fileID: 0}
+  DiePanel: {fileID: 0}
 --- !u!114 &4992232882512230807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1803,8 +1806,8 @@ MonoBehaviour:
   axes: 1
   minimumVert: -45
   maximumVert: 45
-  sensHorizontal: 5
-  sensVertical: 5
+  sensHorizontal: 2
+  sensVertical: 2
   _rotationX: 0
 --- !u!114 &4992232882512230804
 MonoBehaviour:
@@ -1818,7 +1821,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db519776b50fd540a6f80d8499ac258, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  speed: 10
   gravity: -9.8
 --- !u!1 &4992232882532202072
 GameObject:
@@ -2352,8 +2355,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   axes: 2
-  minimumVert: -15
-  maximumVert: 10
+  minimumVert: -25
+  maximumVert: 30
   sensHorizontal: 5
   sensVertical: 5
   _rotationX: 0

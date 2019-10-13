@@ -7,6 +7,11 @@ public class StrategyInfo : MonoBehaviour
     //Singleton reference
     private static StrategyInfo _instance = null;
 
+    //Win parameters
+    public float DieTime = 6;
+    private float startTime;
+    private bool winCalled;
+
     //Strategy stuff
     public int money;
 
@@ -17,6 +22,8 @@ public class StrategyInfo : MonoBehaviour
     public string activeSlot;
     
     public Base.Type slot00, slot01, slot10, slot11;
+
+    public GameObject youWinPanel;
 
     public struct EnemyShotStats
     {
@@ -71,7 +78,7 @@ public class StrategyInfo : MonoBehaviour
         //global stats
         money = 500;
 
-        
+        winCalled = false;
 
         //Enemy Stats
         easyEnemy.weak.speed = 10.0f;
@@ -154,7 +161,23 @@ public class StrategyInfo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if ((slot00 == Base.Type.PlayerBase1 || slot00 == Base.Type.PlayerBase2 || slot00 == Base.Type.PlayerBase3)
+            && (slot01 == Base.Type.PlayerBase1 || slot01 == Base.Type.PlayerBase2 || slot01 == Base.Type.PlayerBase3)
+            && (slot10 == Base.Type.PlayerBase1 || slot10 == Base.Type.PlayerBase2 || slot10 == Base.Type.PlayerBase3)
+            && (slot11 == Base.Type.PlayerBase1 || slot11 == Base.Type.PlayerBase2 || slot11 == Base.Type.PlayerBase3)
+            && !winCalled)
+        {
+            startTime = Time.time;
+            winCalled = true;
+        }
+
+        if (winCalled && (Time.time - startTime >= DieTime))
+        {
+            Instantiate<GameObject>(youWinPanel,GameObject.Find("Canvas").transform);
+        }
+
+
+
     }
 
     public void MissionSuccess()

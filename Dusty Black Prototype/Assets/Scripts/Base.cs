@@ -29,7 +29,7 @@ public class Base : MonoBehaviour
         {
             BaseType = info.slot10;
         }
-        else if (this.gameObject.name == "Slot ¡1 - 1")
+        else if (this.gameObject.name == "Slot 1 - 1")
         {
             BaseType = info.slot11;
         }
