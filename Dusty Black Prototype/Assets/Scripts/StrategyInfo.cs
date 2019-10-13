@@ -10,6 +10,7 @@ public class StrategyInfo : MonoBehaviour
     //Strategy stuff
     public int money;
 
+
     public int difficulty;
     public bool strategySuccess;
 
@@ -21,6 +22,7 @@ public class StrategyInfo : MonoBehaviour
     {
         public float speed;
         public int damage;
+        public int reward;
     }
 
     public struct EnemyType
@@ -69,6 +71,8 @@ public class StrategyInfo : MonoBehaviour
         //global stats
         money = 500;
 
+        
+
         //Enemy Stats
         easyEnemy.weak.speed = 10.0f;
         easyEnemy.strong.speed = 10.0f;
@@ -87,6 +91,17 @@ public class StrategyInfo : MonoBehaviour
 
         hardEnemy.weak.damage = 70;
         hardEnemy.strong.damage = 100;
+
+        //Rewards
+        easyEnemy.weak.reward = 60;
+        easyEnemy.strong.reward = 150;
+
+        mediumEnemy.weak.reward = 100;
+        mediumEnemy.strong.reward = 180;
+
+        hardEnemy.weak.reward = 180;
+        hardEnemy.strong.reward = 300;
+
 
         //Little base
         littleBase.option1.price = 25;
@@ -112,7 +127,7 @@ public class StrategyInfo : MonoBehaviour
         largeBase.option1.price = 50;
         largeBase.option1.rate = 10;
 
-        largeBase.option2.price = 80;
+        largeBase.option2.price = 100;
         largeBase.option2.rate = 30;
 
         largeBase.option3.price = 200;
@@ -157,12 +172,15 @@ public class StrategyInfo : MonoBehaviour
                 case Base.Type.PlayerBase3:
                     break;
                 case Base.Type.EnemyBase1:
+                    money += easyEnemy.strong.reward;
                     slot00 = Base.Type.PlayerBase1;
                     break;
                 case Base.Type.EnemyBase2:
+                    money += mediumEnemy.strong.reward;
                     slot00 = Base.Type.EnemyBase1;
                     break;
                 case Base.Type.EnemyBase3:
+                    money += hardEnemy.strong.reward;
                     slot00 = Base.Type.EnemyBase2;
                     break;
                 default:
@@ -182,12 +200,15 @@ public class StrategyInfo : MonoBehaviour
                 case Base.Type.PlayerBase3:
                     break;
                 case Base.Type.EnemyBase1:
+                    money += easyEnemy.strong.reward;
                     slot01 = Base.Type.PlayerBase1;
                     break;
                 case Base.Type.EnemyBase2:
+                    money += mediumEnemy.strong.reward;
                     slot01 = Base.Type.EnemyBase1;
                     break;
                 case Base.Type.EnemyBase3:
+                    money += hardEnemy.strong.reward;
                     slot01 = Base.Type.EnemyBase2;
                     break;
                 default:
@@ -207,12 +228,15 @@ public class StrategyInfo : MonoBehaviour
                 case Base.Type.PlayerBase3:
                     break;
                 case Base.Type.EnemyBase1:
+                    money += easyEnemy.strong.reward;
                     slot10 = Base.Type.PlayerBase1;
                     break;
                 case Base.Type.EnemyBase2:
+                    money += mediumEnemy.strong.reward;
                     slot10 = Base.Type.EnemyBase1;
                     break;
                 case Base.Type.EnemyBase3:
+                    money += hardEnemy.strong.reward;
                     slot10 = Base.Type.EnemyBase2;
                     break;
                 default:
@@ -232,12 +256,15 @@ public class StrategyInfo : MonoBehaviour
                 case Base.Type.PlayerBase3:
                     break;
                 case Base.Type.EnemyBase1:
+                    money += easyEnemy.strong.reward;
                     slot11 = Base.Type.PlayerBase1;
                     break;
                 case Base.Type.EnemyBase2:
+                    money += mediumEnemy.strong.reward;
                     slot11 = Base.Type.EnemyBase1;
                     break;
                 case Base.Type.EnemyBase3:
+                    money += hardEnemy.strong.reward;
                     slot11 = Base.Type.EnemyBase2;
                     break;
                 default:
@@ -262,12 +289,15 @@ public class StrategyInfo : MonoBehaviour
                     slot00 = Base.Type.PlayerBase2;
                     break;
                 case Base.Type.EnemyBase1:
+                    money += easyEnemy.weak.reward;
                     slot00 = Base.Type.EnemyBase2;
                     break;
                 case Base.Type.EnemyBase2:
+                    money += mediumEnemy.weak.reward;
                     slot00 = Base.Type.EnemyBase3;
                     break;
                 case Base.Type.EnemyBase3:
+                    money += hardEnemy.weak.reward;
                     break;
                 default:
                     break;
@@ -287,12 +317,15 @@ public class StrategyInfo : MonoBehaviour
                     slot01 = Base.Type.PlayerBase2;
                     break;
                 case Base.Type.EnemyBase1:
+                    money += easyEnemy.weak.reward;
                     slot01 = Base.Type.EnemyBase2;
                     break;
                 case Base.Type.EnemyBase2:
+                    money += mediumEnemy.weak.reward;
                     slot01 = Base.Type.EnemyBase3;
                     break;
                 case Base.Type.EnemyBase3:
+                    money += hardEnemy.weak.reward;
                     break;
                 default:
                     break;
@@ -312,12 +345,15 @@ public class StrategyInfo : MonoBehaviour
                     slot10 = Base.Type.PlayerBase2;
                     break;
                 case Base.Type.EnemyBase1:
+                    money += easyEnemy.weak.reward;
                     slot10 = Base.Type.EnemyBase2;
                     break;
                 case Base.Type.EnemyBase2:
+                    money += mediumEnemy.weak.reward;
                     slot10 = Base.Type.EnemyBase3;
                     break;
                 case Base.Type.EnemyBase3:
+                    money += hardEnemy.weak.reward;
                     break;
                 default:
                     break;
@@ -337,12 +373,15 @@ public class StrategyInfo : MonoBehaviour
                     slot11 = Base.Type.PlayerBase2;
                     break;
                 case Base.Type.EnemyBase1:
+                    money += easyEnemy.weak.reward;
                     slot11 = Base.Type.EnemyBase2;
                     break;
                 case Base.Type.EnemyBase2:
+                    money += mediumEnemy.weak.reward;
                     slot11 = Base.Type.EnemyBase3;
                     break;
                 case Base.Type.EnemyBase3:
+                    money += hardEnemy.weak.reward;
                     break;
                 default:
                     break;
