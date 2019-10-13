@@ -10,7 +10,7 @@ public class StrategyInfo : MonoBehaviour
     //Win parameters
     public float DieTime = 6;
     private float startTime;
-    private bool winCalled;
+    private bool winCalled, panelActivated;
 
     //Strategy stuff
     public int money;
@@ -78,7 +78,7 @@ public class StrategyInfo : MonoBehaviour
         //global stats
         money = 500;
 
-        winCalled = false;
+        winCalled=  panelActivated = false;
 
         //Enemy Stats
         easyEnemy.weak.speed = 10.0f;
@@ -171,9 +171,10 @@ public class StrategyInfo : MonoBehaviour
             winCalled = true;
         }
 
-        if (winCalled && (Time.time - startTime >= DieTime))
+        if (winCalled && (Time.time - startTime >= DieTime) && !panelActivated)
         {
             Instantiate<GameObject>(youWinPanel,GameObject.Find("Canvas").transform);
+            panelActivated = true;
         }
 
 

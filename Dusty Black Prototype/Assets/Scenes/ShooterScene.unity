@@ -2854,7 +2854,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3689593fadc10054c8d44775680e0f1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DieTime: 3
+  DieTime: 6
 --- !u!1 &1277804064
 GameObject:
   m_ObjectHideFlags: 0
@@ -3963,8 +3963,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\xA1Soldado! tu misi\xF3n es robar el cargamento y huir con el cami\xF3n
-    que te est\xE1 esperando en el callej\xF3n"
+  m_Text: "\xA1Soldado! Tu misi\xF3n es robar el cargamento y huir con el cami\xF3n
+    que te est\xE1 esperando en el callej\xF3n."
 --- !u!222 &2021225693
 CanvasRenderer:
   m_ObjectHideFlags: 0

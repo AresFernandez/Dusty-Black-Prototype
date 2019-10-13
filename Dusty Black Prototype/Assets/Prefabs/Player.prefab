@@ -2357,8 +2357,8 @@ MonoBehaviour:
   axes: 2
   minimumVert: -25
   maximumVert: 30
-  sensHorizontal: 5
-  sensVertical: 5
+  sensHorizontal: 2
+  sensVertical: 2
   _rotationX: 0
 --- !u!114 &4992232882941577109
 MonoBehaviour:
