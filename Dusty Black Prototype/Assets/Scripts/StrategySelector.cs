@@ -22,6 +22,8 @@ public class StrategySelector : MonoBehaviour
     public Button button2;
     public Button button3;
 
+    public Text reward;
+
     private Color allyColor;
     private Color enemyColor;
 
@@ -55,6 +57,7 @@ public class StrategySelector : MonoBehaviour
                 button3.gameObject.SetActive(false);
                 price3.gameObject.SetActive(false);
                 rate3.gameObject.SetActive(false);
+                reward.gameObject.SetActive(false);
                 break;
             case Base.Type.PlayerBase2:
                 this.gameObject.GetComponent<Image>().color = allyColor;
@@ -68,6 +71,7 @@ public class StrategySelector : MonoBehaviour
                 button3.gameObject.SetActive(false);
                 price3.gameObject.SetActive(false);
                 rate3.gameObject.SetActive(false);
+                reward.gameObject.SetActive(false);
                 break;
             case Base.Type.PlayerBase3:
                 this.gameObject.GetComponent<Image>().color = allyColor;
@@ -81,6 +85,7 @@ public class StrategySelector : MonoBehaviour
                 button3.gameObject.SetActive(false);
                 price3.gameObject.SetActive(false);
                 rate3.gameObject.SetActive(false);
+                reward.gameObject.SetActive(false);
                 break;
             case Base.Type.EnemyBase1:
                 this.gameObject.GetComponent<Image>().color = enemyColor;
@@ -91,6 +96,7 @@ public class StrategySelector : MonoBehaviour
                 rate2.text = "Success Rate: " + info.GetComponent<StrategyInfo>().littleBase.option2.rate + "%";
                 price3.text = "Price: " + info.GetComponent<StrategyInfo>().littleBase.option3.price + "€";
                 rate3.text = "Success Rate: " + info.GetComponent<StrategyInfo>().littleBase.option3.rate + "%";
+                reward.text = "Rewards   -   Win: " + info.GetComponent<StrategyInfo>().easyEnemy.strong.reward + "€   /   Lose: " + info.GetComponent<StrategyInfo>().easyEnemy.weak.reward + "€";
                 break;
             case Base.Type.EnemyBase2:
                 this.gameObject.GetComponent<Image>().color = enemyColor;
@@ -101,6 +107,7 @@ public class StrategySelector : MonoBehaviour
                 rate2.text = "Success Rate: " + info.GetComponent<StrategyInfo>().mediumBase.option2.rate + "%";
                 price3.text = "Price: " + info.GetComponent<StrategyInfo>().mediumBase.option3.price + "€";
                 rate3.text = "Success Rate: " + info.GetComponent<StrategyInfo>().mediumBase.option3.rate + "%";
+                reward.text = "Rewards   -   Win: " + info.GetComponent<StrategyInfo>().mediumEnemy.strong.reward + "€   /   Lose: " + info.GetComponent<StrategyInfo>().mediumEnemy.weak.reward + "€";
                 break;
             case Base.Type.EnemyBase3:
                 this.gameObject.GetComponent<Image>().color = enemyColor;
@@ -111,6 +118,7 @@ public class StrategySelector : MonoBehaviour
                 rate2.text = "Success Rate: " + info.GetComponent<StrategyInfo>().largeBase.option2.rate + "%";
                 price3.text = "Price: " + info.GetComponent<StrategyInfo>().largeBase.option3.price + "€";
                 rate3.text = "Success Rate: " + info.GetComponent<StrategyInfo>().largeBase.option3.rate + "%";
+                reward.text = "Rewards   -   Win: " + info.GetComponent<StrategyInfo>().hardEnemy.strong.reward + "€   /   Lose: " + info.GetComponent<StrategyInfo>().hardEnemy.weak.reward + "€";
                 break;
             default:
                 break;

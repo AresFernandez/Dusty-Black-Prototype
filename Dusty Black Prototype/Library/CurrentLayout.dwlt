@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 398}
   m_MaxSize: {x: 10004, y: 14048}
   vertical: 1
-  controlID: 34
+  controlID: 63
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 398}
   m_MaxSize: {x: 18008, y: 14048}
   vertical: 0
-  controlID: 97
+  controlID: 50
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -277,15 +277,15 @@ MonoBehaviour:
   m_MaximizeOnPlay: 0
   m_Gizmos: 0
   m_Stats: 0
-  m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_SelectedSizes: 05000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_TargetDisplay: 0
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -700
-    m_HBaseRangeMax: 700
+    m_HBaseRangeMin: -565.5
+    m_HBaseRangeMax: 565.5
     m_VBaseRangeMin: -318
     m_VBaseRangeMax: 318
     m_HAllowExceedBaseRangeMin: 1
@@ -430,11 +430,11 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\aresi\Documents\Repositories\Dusty_Black_Prototype\Dusty
     Black Prototype
@@ -442,8 +442,8 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 19}
-    m_SelectedIDs: ae2a0000
-    m_LastClickedID: 10926
+    m_SelectedIDs: e42a0000
+    m_LastClickedID: 10980
     m_ExpandedIDs: 0000000026290000502d0000b42d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -499,7 +499,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000000000003c310000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -591,9 +591,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: d4fbffff
+      m_SelectedIDs: 80310000
+      m_LastClickedID: 12672
+      m_ExpandedIDs: 3efbffffd4fbffff4031000062310000c0310000ee310000ae320000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -649,9 +649,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 761.57886, y: 226.31273, z: -760.9969}
+    m_Target: {x: 141.36748, y: 472.29996, z: 0}
     speed: 2
-    m_Value: {x: 761.57886, y: 226.31273, z: -760.9969}
+    m_Value: {x: 141.36748, y: 472.29996, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -679,13 +679,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.045956224, y: 0.085345745, z: 0.0039359014, w: -0.99528325}
+    m_Target: {x: -0.12678441, y: 0.3393333, z: -0.046219055, w: -0.93093634}
     speed: 2
-    m_Value: {x: 0.045956224, y: 0.085345745, z: 0.0039359014, w: -0.99528325}
+    m_Value: {x: -0.12678441, y: 0.3393333, z: -0.046219055, w: -0.93093634}
   m_Size:
-    m_Target: 40.420677
+    m_Target: 797.0961
     speed: 2
-    m_Value: 40.420677
+    m_Value: 797.0961
   m_Ortho:
     m_Target: 0
     speed: 2
