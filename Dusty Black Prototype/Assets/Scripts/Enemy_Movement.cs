@@ -17,13 +17,17 @@ public class Enemy_Movement : MonoBehaviour
 
 
 
-
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+        animator.SetBool("IsAim", true);
+        animator.SetBool("IsGoingForward", true);
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         _alive = move = true;
-        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -49,7 +53,7 @@ public class Enemy_Movement : MonoBehaviour
             if (Time.time - timeStart >= shotInterval)
             {
                 animator.SetTrigger("IsShooting");
-                Instantiate(paintballPrefab, transform.TransformPoint(Vector3.forward * 1.5f + Vector3.up), transform.rotation);
+                Instantiate(paintballPrefab, transform.TransformPoint(Vector3.forward * 1.567f + Vector3.up * 1.62f + Vector3.right * 0.272f), transform.rotation);
                 timeStart = Time.time;
             }
         }
@@ -61,8 +65,8 @@ public class Enemy_Movement : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            animator.SetBool("IsGoingForward", false);
             move = false;
-            animator.SetBool("IsAim", true);
             timeStart = Time.time;
             player = other.gameObject;
         }

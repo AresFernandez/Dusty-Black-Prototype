@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 498}
   m_MaxSize: {x: 10004, y: 14048}
   vertical: 1
-  controlID: 107
+  controlID: 15
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -97,10 +97,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 709, y: 498}
-  m_MaxSize: {x: 18004, y: 14048}
+  m_MinSize: {x: 711, y: 498}
+  m_MaxSize: {x: 18006, y: 14048}
   vertical: 0
-  controlID: 106
+  controlID: 62
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -120,8 +120,8 @@ MonoBehaviour:
     y: 0
     width: 277
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 74}
+  m_MaxSize: {x: 4002, y: 4024}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -361,11 +361,11 @@ MonoBehaviour:
     - e00: 0.95550627
       e01: 0
       e02: 0
-      e03: -125.8707
+      e03: -61.870712
       e10: 0
       e11: 0.95550627
       e12: 0
-      e13: 141.95966
+      e13: 122.95964
       e20: 0
       e21: 0
       e22: 1
@@ -430,11 +430,11 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/SciFiWarrior/Animations
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/SciFiWarrior/Animations
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\aresi\Documents\Repositories\Dusty_Black_Prototype\Dusty
     Black Prototype
@@ -442,8 +442,8 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 131}
-    m_SelectedIDs: f22a0000
-    m_LastClickedID: 10994
+    m_SelectedIDs: 822b0000
+    m_LastClickedID: 11138
     m_ExpandedIDs: 000000002a290000642d0000ce2d0000582e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -472,7 +472,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000002a290000642d0000ce2d0000
+    m_ExpandedIDs: 000000002a290000642d0000ce2d0000582e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -591,9 +591,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 98b2ffff
       m_LastClickedID: 0
-      m_ExpandedIDs: 3efbffffd4fbffff
+      m_ExpandedIDs: 7cf9ffffd4fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -649,9 +649,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 556.878, y: 347.9115, z: -690.5409}
+    m_Target: {x: 16.830334, y: 1.1244901, z: 26.453114}
     speed: 2
-    m_Value: {x: 556.878, y: 347.9115, z: -690.5409}
+    m_Value: {x: 16.830334, y: 1.1244901, z: 26.453114}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -679,9 +679,9 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.018358469, y: -0.012946524, z: 0.00024243657, w: 0.99974763}
+    m_Target: {x: 0.09363606, y: 0.69857126, z: -0.09300449, w: 0.7032643}
     speed: 2
-    m_Value: {x: 0.018358469, y: -0.012946524, z: 0.00024243657, w: 0.99974763}
+    m_Value: {x: 0.09363606, y: 0.69857126, z: -0.09300449, w: 0.7032643}
   m_Size:
     m_Target: 7.5119047
     speed: 2
