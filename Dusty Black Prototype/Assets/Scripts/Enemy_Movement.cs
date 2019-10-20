@@ -13,6 +13,8 @@ public class Enemy_Movement : MonoBehaviour
 
     public GameObject paintballPrefab;
     private GameObject player;
+    private Animator animator;
+
 
 
 
@@ -21,6 +23,7 @@ public class Enemy_Movement : MonoBehaviour
     void Start()
     {
         _alive = move = true;
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -45,6 +48,7 @@ public class Enemy_Movement : MonoBehaviour
             transform.LookAt(player.transform);
             if (Time.time - timeStart >= shotInterval)
             {
+                animator.SetTrigger("IsShooting");
                 Instantiate(paintballPrefab, transform.TransformPoint(Vector3.forward * 1.5f + Vector3.up), transform.rotation);
                 timeStart = Time.time;
             }
@@ -58,6 +62,7 @@ public class Enemy_Movement : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             move = false;
+            animator.SetBool("IsAim", true);
             timeStart = Time.time;
             player = other.gameObject;
         }

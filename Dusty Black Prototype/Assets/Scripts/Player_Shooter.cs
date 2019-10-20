@@ -9,14 +9,16 @@ public class Player_Shooter : MonoBehaviour
     public GameObject bloodParticles;
     public GameObject dustParticles;
     private Camera playerCam;
+    private Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
         playerCam = GetComponent<Camera>();
-
+        animator = GetComponentInParent<Animator>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        animator.SetBool("IsAim",true);
     }
 
     // Update is called once per frame
@@ -24,6 +26,7 @@ public class Player_Shooter : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            animator.SetTrigger("IsShooting");
             Vector3 point = new Vector3(playerCam.pixelWidth / 2, playerCam.pixelHeight / 2, 0);
             Ray ray = playerCam.ScreenPointToRay(point);
             RaycastHit hit;
