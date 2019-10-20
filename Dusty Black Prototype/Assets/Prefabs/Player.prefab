@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &376148274078435794
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2984994832306822217}
+  m_Layer: 0
+  m_Name: CanonPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2984994832306822217
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376148274078435794}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.244, y: 1.569, z: 1.577}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4992232882512230805}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4992232881201819556
 GameObject:
   m_ObjectHideFlags: 0
@@ -1736,6 +1766,7 @@ Transform:
   - {fileID: 4992232881495025864}
   - {fileID: 4992232882271047463}
   - {fileID: 4992232882941577111}
+  - {fileID: 2984994832306822217}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2374,6 +2405,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bloodParticles: {fileID: 7707949069701116328, guid: c21a66306d848984baa4dc593e9ed468,
     type: 3}
+  dustParticles: {fileID: 5461926016585002256, guid: 3e1ad4204afa79f4cbee7791ac858183,
+    type: 3}
+  shotParticles: {fileID: 5983901714860361081, guid: 25f95e1ed09cdde49b0edd503e83ec29,
+    type: 3}
+  canonPos: {fileID: 2984994832306822217}
 --- !u!1 &4992232882993120514
 GameObject:
   m_ObjectHideFlags: 0

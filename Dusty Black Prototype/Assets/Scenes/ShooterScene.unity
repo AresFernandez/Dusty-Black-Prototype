@@ -714,6 +714,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 178497969}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &262397467 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4992232883316191396, guid: 622d387fc7b51a0448c9066774b71375,
+    type: 3}
+  m_PrefabInstance: {fileID: 4992232883216166342}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &272099096
 GameObject:
   m_ObjectHideFlags: 0
@@ -4491,9 +4497,33 @@ PrefabInstance:
       objectReference: {fileID: 858369393}
     - target: {fileID: 4992232882941577109, guid: 622d387fc7b51a0448c9066774b71375,
         type: 3}
-      propertyPath: dustParticles
+      propertyPath: rifle
       value: 
-      objectReference: {fileID: 5461926016585002256, guid: 3e1ad4204afa79f4cbee7791ac858183,
+      objectReference: {fileID: 262397467}
+    - target: {fileID: 2984994832306822217, guid: 622d387fc7b51a0448c9066774b71375,
         type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.3197863
+      objectReference: {fileID: 0}
+    - target: {fileID: 2984994832306822217, guid: 622d387fc7b51a0448c9066774b71375,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 37.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2984994832306822217, guid: 622d387fc7b51a0448c9066774b71375,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.94748974
+      objectReference: {fileID: 0}
+    - target: {fileID: 2984994832306822217, guid: 622d387fc7b51a0448c9066774b71375,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2984994832306822217, guid: 622d387fc7b51a0448c9066774b71375,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 622d387fc7b51a0448c9066774b71375, type: 3}

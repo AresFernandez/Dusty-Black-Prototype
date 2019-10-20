@@ -8,6 +8,9 @@ public class Player_Shooter : MonoBehaviour
 
     public GameObject bloodParticles;
     public GameObject dustParticles;
+    public GameObject shotParticles;
+    public Transform canonPos;
+    public Transform rifle;
     private Camera playerCam;
     private Animator animator;
 
@@ -27,6 +30,7 @@ public class Player_Shooter : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             animator.SetTrigger("IsShooting");
+            Instantiate<GameObject>(shotParticles, canonPos.position, canonPos.rotation,rifle);
             Vector3 point = new Vector3(playerCam.pixelWidth / 2, playerCam.pixelHeight / 2, 0);
             Ray ray = playerCam.ScreenPointToRay(point);
             RaycastHit hit;
