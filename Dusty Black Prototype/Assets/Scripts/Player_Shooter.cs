@@ -1,10 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Player_Shooter : MonoBehaviour
 {
 
+    public GameObject bloodParticles;
+    public GameObject dustParticles;
     private Camera playerCam;
 
     // Start is called before the first frame update
@@ -33,27 +36,29 @@ public class Player_Shooter : MonoBehaviour
                 if (target != null)
                 {
                     target.GotShot();
+                    Instantiate<GameObject>(bloodParticles, hit.point, new Quaternion());
                 }
                 else
                 {
-                    StartCoroutine(ShotGen(hit.point));
+                    ShotGen(hit.point);
                 }
                 
             }
         }
     }
 
-    private IEnumerator ShotGen(Vector3 pos)
+
+    private void ShotGen (Vector3 pos)
     {
+        Instantiate<GameObject>(dustParticles, pos, new Quaternion());
+        ////generar explosion particulas
+        //GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+        //sphere.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+        //sphere.transform.position = pos;
 
-        //generar explosion particulas
-        GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-        sphere.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
-        sphere.transform.position = pos;
+        //yield return new WaitForSeconds(1);
 
-        yield return new WaitForSeconds(1);
-
-        Destroy(sphere);
+        //Destroy(sphere);
     }
 
     private void OnGUI()

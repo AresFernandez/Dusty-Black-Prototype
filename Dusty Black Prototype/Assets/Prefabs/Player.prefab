@@ -2372,6 +2372,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5774cceaa5046454c9cdeb5eaa6da043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bloodParticles: {fileID: 7707949069701116328, guid: c21a66306d848984baa4dc593e9ed468,
+    type: 3}
 --- !u!1 &4992232882993120514
 GameObject:
   m_ObjectHideFlags: 0

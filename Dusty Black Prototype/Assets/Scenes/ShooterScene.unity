@@ -4325,5 +4325,11 @@ PrefabInstance:
       propertyPath: DiePanel
       value: 
       objectReference: {fileID: 858369393}
+    - target: {fileID: 4992232882941577109, guid: 622d387fc7b51a0448c9066774b71375,
+        type: 3}
+      propertyPath: dustParticles
+      value: 
+      objectReference: {fileID: 5461926016585002256, guid: 3e1ad4204afa79f4cbee7791ac858183,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 622d387fc7b51a0448c9066774b71375, type: 3}
