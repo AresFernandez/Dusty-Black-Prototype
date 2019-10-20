@@ -35,8 +35,8 @@ public class StrategySelector : MonoBehaviour
     {
         selected = false;
         info = GameObject.Find("InfoHolder");
-        allyColor = new Color(103f/255f, 1, 103f/255f, 219f/255f);
-        enemyColor = new Color(1, 53f/255f, 53f/255f, 219f/255f);
+        allyColor = new Color(103f/255f, 1, 103f/255f, 255f/255f);
+        enemyColor = new Color(1, 53f/255f, 53f/255f, 255f/255f);
     }
 
     // Update is called once per frame
