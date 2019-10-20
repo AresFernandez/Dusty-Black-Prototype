@@ -12,7 +12,7 @@ public class Player_Shooter : MonoBehaviour
     private Animator animator;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         playerCam = GetComponent<Camera>();
         animator = GetComponentInParent<Animator>();
