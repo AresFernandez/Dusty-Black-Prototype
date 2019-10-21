@@ -13,10 +13,12 @@ public class Player_Shooter : MonoBehaviour
     public Transform rifle;
     private Camera playerCam;
     private Animator animator;
+    private float timeStart, shotInterval = 0.5f;
 
     // Start is called before the first frame update
     void Awake()
     {
+        timeStart = Time.time;
         playerCam = GetComponent<Camera>();
         animator = GetComponentInParent<Animator>();
         Cursor.lockState = CursorLockMode.Locked;
@@ -27,8 +29,9 @@ public class Player_Shooter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && (Time.time - timeStart >= shotInterval))
         {
+            timeStart = Time.time;
             animator.SetTrigger("IsShooting");
             Instantiate<GameObject>(shotParticles, canonPos.position, canonPos.rotation,rifle);
             Vector3 point = new Vector3(playerCam.pixelWidth / 2, playerCam.pixelHeight / 2, 0);
