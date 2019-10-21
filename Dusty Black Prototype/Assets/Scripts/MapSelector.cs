@@ -20,7 +20,7 @@ public class MapSelector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && GameObject.Find("TutorialPanel")==null)
+        if (Input.GetMouseButtonDown(0) && GameObject.Find("StrategyTutorialPanel(Clone)")==null)
         {
             Vector3 point = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
             Ray ray = playerCam.ScreenPointToRay(point);

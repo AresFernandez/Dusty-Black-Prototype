@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 498}
   m_MaxSize: {x: 10004, y: 14048}
   vertical: 1
-  controlID: 51
+  controlID: 15
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -97,10 +97,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 713, y: 498}
-  m_MaxSize: {x: 18008, y: 14048}
+  m_MinSize: {x: 709, y: 498}
+  m_MaxSize: {x: 18004, y: 14048}
   vertical: 0
-  controlID: 50
+  controlID: 14
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -120,8 +120,8 @@ MonoBehaviour:
     y: 0
     width: 277
     height: 947
-  m_MinSize: {x: 277, y: 74}
-  m_MaxSize: {x: 4002, y: 4024}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -146,8 +146,8 @@ MonoBehaviour:
     y: 0
     width: 239
     height: 947
-  m_MinSize: {x: 202, y: 224}
-  m_MaxSize: {x: 4002, y: 4024}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -430,11 +430,11 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\aresi\Documents\Repositories\Dusty_Black_Prototype\Dusty
     Black Prototype
@@ -442,9 +442,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 39}
-    m_SelectedIDs: 6c2e0000
-    m_LastClickedID: 11884
-    m_ExpandedIDs: 000000002c290000662d0000d02d000000ca9a3b
+    m_SelectedIDs: fa2a0000
+    m_LastClickedID: 11002
+    m_ExpandedIDs: 0000000030290000722d0000dc2d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -472,7 +472,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000002c290000662d0000d02d0000
+    m_ExpandedIDs: 0000000030290000722d0000dc2d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -591,9 +591,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: b82c0000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 9442ffffb249ffff6a63ffff3295ffff4097ffffb498ffffc498ffffe49affff709cffff8e9dffff6ea3ffff7ea3ffff40b0ffffdab0ffff68b7ffff42faffffaafbffff26310000844b0000b44d0000064e0000166c0000286c0000306c0000926e00006275000074750000827a0000bc7a00002e7b0000
+      m_ExpandedIDs: 62f0ffff84f0ffff70f6ffff7cf6ffff8af6ffffaafbffff36310000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
