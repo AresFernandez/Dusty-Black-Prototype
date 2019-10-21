@@ -2417,7 +2417,7 @@ RectTransform:
   m_GameObject: {fileID: 785407800}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children:
   - {fileID: 1537021215}
   m_Father: {fileID: 1313616107}
@@ -2968,6 +2968,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DieTime: 6
+  firstTimeStrategy: 0
+  firstTimeShooter: 0
   money: 0
   difficulty: 0
   strategySuccess: 0
@@ -2977,6 +2979,10 @@ MonoBehaviour:
   slot10: 0
   slot11: 0
   youWinPanel: {fileID: 8681341043102367875, guid: d8b7c079635825c47a3729e818a471bc,
+    type: 3}
+  strategyTutorialPanel: {fileID: 7706736520531071636, guid: cf0c613533f4abe43ac4d6968c52d6db,
+    type: 3}
+  shooterTutorialPanel: {fileID: 7997337431904370405, guid: 7fbb5a5234752a74f92ce6f8ed5c70e7,
     type: 3}
 --- !u!1 &988341625
 GameObject:
@@ -3192,7 +3198,7 @@ RectTransform:
   m_GameObject: {fileID: 1015468556}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children:
   - {fileID: 499116221}
   m_Father: {fileID: 1313616107}

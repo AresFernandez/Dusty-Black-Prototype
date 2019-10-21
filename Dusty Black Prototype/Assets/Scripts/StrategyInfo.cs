@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StrategyInfo : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class StrategyInfo : MonoBehaviour
     public float DieTime = 6;
     private float startTime;
     private bool winCalled, panelActivated;
+
+    public bool firstTimeStrategy, firstTimeShooter;
+    private bool shooterDestroyed;
 
     //Strategy stuff
     public int money;
@@ -24,6 +28,9 @@ public class StrategyInfo : MonoBehaviour
     public Base.Type slot00, slot01, slot10, slot11;
 
     public GameObject youWinPanel;
+    public GameObject strategyTutorialPanel;
+    public GameObject shooterTutorialPanel;
+    private GameObject aux;
 
     public struct EnemyShotStats
     {
@@ -78,7 +85,8 @@ public class StrategyInfo : MonoBehaviour
         //global stats
         money = 500;
 
-        winCalled=  panelActivated = false;
+        shooterDestroyed = winCalled =  panelActivated = false;
+        firstTimeStrategy = firstTimeShooter = true;
 
         //Enemy Stats
         easyEnemy.weak.speed = 10.0f;
@@ -177,6 +185,27 @@ public class StrategyInfo : MonoBehaviour
             panelActivated = true;
         }
 
+        if (firstTimeStrategy && SceneManager.GetActiveScene().name == "StrategyScene")
+        {
+            Instantiate<GameObject>(strategyTutorialPanel, GameObject.Find("Canvas").transform);
+            firstTimeStrategy = false;
+        }
+
+        if (firstTimeShooter && SceneManager.GetActiveScene().name == "ShooterScene")
+        {
+            aux = Instantiate<GameObject>(shooterTutorialPanel, GameObject.Find("Canvas").transform);
+            firstTimeShooter = false;
+        }
+
+        float deltaX = Input.GetAxis("Horizontal");
+        float deltaZ = Input.GetAxis("Vertical");
+
+        if (!shooterDestroyed && !firstTimeShooter && (Input.GetMouseButtonDown(0) || deltaX != 0 || deltaZ != 0))
+        {
+            shooterDestroyed = true;
+            Destroy(aux.gameObject);
+        }
+        
 
 
     }
