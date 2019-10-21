@@ -9,7 +9,7 @@ public class Enemy_Movement : MonoBehaviour
     public float obstacleRange = 5.0f;
 
     private bool _alive, move;
-    public float timeStart, shotInterval = 2;
+    public float timeStart, shotInterval = 1;
 
     public GameObject paintballPrefab;
     private GameObject player;
@@ -60,6 +60,12 @@ public class Enemy_Movement : MonoBehaviour
 
     }
 
+    public void EnemyAware()
+    {
+        animator.SetBool("IsGoingForward", false);
+        move = false;
+        player = GameObject.Find("Player");
+    }
 
     public void OnTriggerEnter(Collider other)
     {
@@ -67,7 +73,6 @@ public class Enemy_Movement : MonoBehaviour
         {
             animator.SetBool("IsGoingForward", false);
             move = false;
-            timeStart = Time.time;
             player = other.gameObject;
         }
     }

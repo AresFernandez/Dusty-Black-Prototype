@@ -37,6 +37,7 @@ public class StrategyInfo : MonoBehaviour
         public float speed;
         public int damage;
         public int reward;
+        public float health;
     }
 
     public struct EnemyType
@@ -106,6 +107,16 @@ public class StrategyInfo : MonoBehaviour
 
         hardEnemy.weak.damage = 70;
         hardEnemy.strong.damage = 100;
+
+
+        easyEnemy.weak.health = 80; // 2
+        easyEnemy.strong.health = 120; //3
+
+        mediumEnemy.weak.health = 160; //4
+        mediumEnemy.strong.health = 200; //5
+
+        hardEnemy.weak.health = 240; //6
+        hardEnemy.strong.health = 280; //7
 
         //Rewards
         easyEnemy.weak.reward = 60;
