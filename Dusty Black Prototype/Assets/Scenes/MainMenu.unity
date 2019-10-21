@@ -171,11 +171,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 6e2e64b866f29924bb37c402d733ea7e, type: 3}
-    m_FontSize: 44
+    m_FontSize: 84
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 55
+    m_MaxSize: 84
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -227,8 +227,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -100.11}
-  m_SizeDelta: {x: 344.11, y: 64.8}
+  m_AnchoredPosition: {x: 0, y: -198}
+  m_SizeDelta: {x: 493.5, y: 92.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &511965090
 MonoBehaviour:
@@ -710,8 +710,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 19.3}
-  m_SizeDelta: {x: 344.11, y: 64.8}
+  m_AnchoredPosition: {x: 0, y: -14}
+  m_SizeDelta: {x: 546.6, y: 84}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1943512158
 MonoBehaviour:
@@ -837,7 +837,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 205.5}
+  m_AnchoredPosition: {x: 0, y: 289}
   m_SizeDelta: {x: 1291, y: 205.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1973370674
@@ -861,9 +861,9 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: a5103addcaf0d384fadd189fa3402e67, type: 3}
-    m_FontSize: 82
-    m_FontStyle: 1
+    m_Font: {fileID: 12800000, guid: 6e2e64b866f29924bb37c402d733ea7e, type: 3}
+    m_FontSize: 140
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 189
@@ -1023,11 +1023,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 6e2e64b866f29924bb37c402d733ea7e, type: 3}
-    m_FontSize: 44
+    m_FontSize: 84
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 55
+    m_MaxSize: 84
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
